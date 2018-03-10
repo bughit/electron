@@ -52,7 +52,7 @@
         'EnableFunctionLevelLinking': 'true',
         'RuntimeTypeInfo': 'false',
         'WarningLevel': '4',
-        'WarnAsError': 'true',
+        'WarnAsError': 'false',
         'DebugInformationFormat': '3',
       },
       'VCLinkerTool': {
@@ -76,6 +76,8 @@
           #   - warning LNK4049: locally defined symbol imported
           '/ignore:4217',
           '/ignore:4049',
+          '/ignore:4743',
+          '/WX:NO',
         ],
       },
     },
@@ -405,6 +407,7 @@
           4715, # not all control paths return a value
           4819, # The file contains a character that cannot be represented in the current code page
           4275, # non dll-interface class used as base for dll-interface class
+          4743,
         ],
       }],
     ],  # conditions
